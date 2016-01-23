@@ -29,7 +29,8 @@ routes.init(app);
 
 var port = process.env.VCAP_APP_PORT || 3000;
 var dbipaddr = process.env.MYMONGO_PORT_27017_TCP_ADDR|"127.0.0.1";
-var dbcreds ={"host":dbipaddr,"db":"","port":"27017","username":"test","password":"test"};
+console.log("dbipaddr",dbipaddr);
+var dbcreds ={"host":dbipaddr,"db":"testdb","port":"27017","username":"test","password":"test"};
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
   var dbcreds = services['mongodb'][0].credentials;
