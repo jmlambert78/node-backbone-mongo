@@ -30,7 +30,7 @@ if (env == 'development') {
 
 routes.init(app);
 //MYMONGO_PORT_27017_TCP_ADDR 
-var port = process.env.VCAP_APP_PORT || 3000;
+var port = process.env.VCAP_APP_PORT || 8080;
 
 var dbcreds ={"host":process.env.MYMONGO_PORT_27017_TCP_ADDR ,"db":"testdb","port":"27017","username":"","password":""};
 console.log("dbcreds",dbcreds);
