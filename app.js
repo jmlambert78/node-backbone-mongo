@@ -24,16 +24,16 @@ app.use(methodOverride());
 if (env == 'development') {
   app.use(errorhandler());
 }
-for (var item in process.env) 
-  console.log(item," = ",process.env[item]);
+//for (var item in process.env) 
+//  console.log(item," = ",process.env[item]);
 
 
 routes.init(app);
 //MYMONGO_PORT_27017_TCP_ADDR 
 var port = process.env.VCAP_APP_PORT || 3000;
-var dbipaddr = process.env["MYMONGO_PORT_27017_TCP_ADDR "]|"127.0.0.1";
-console.log("dbipaddr",dbipaddr);
-var dbcreds ={"host":dbipaddr,"db":"testdb","port":"27017","username":"test","password":"test"};
+
+var dbcreds ={"host":process.env.MYMONGO_PORT_27017_TCP_ADDR ,"db":"testdb","port":"27017","username":"test","password":"test"};
+console.log("dbcreds",dbcreds);
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
   var dbcreds = services['mongodb'][0].credentials;
