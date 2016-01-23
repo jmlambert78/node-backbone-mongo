@@ -28,7 +28,8 @@ if (env == 'development') {
 routes.init(app);
 
 var port = process.env.VCAP_APP_PORT || 3000;
-
+var dbipaddr = process.env.MYMONGO_PORT_27017_TCP_ADDR|"127.0.0.1";
+var dbcreds ={"host":dbipaddr,"db":"","port":"27017","username":"test","password":"test"};
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
   var dbcreds = services['mongodb'][0].credentials;
@@ -38,7 +39,7 @@ if(dbcreds){
   console.log(dbcreds);
   mongoose.connect(dbcreds.host, dbcreds.db, dbcreds.port, {user: dbcreds.username, pass: dbcreds.password});
 }else{
-  mongoose.connect("127.0.0.1", "todomvc", 27017);
+  mongoose.connect(dbipaddr, "todomvc", 27017);
 }
 
 http.createServer(app).listen(port);
