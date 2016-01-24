@@ -1,11 +1,11 @@
 ---
-pipeline: "workflows/node/CanaryReleaseStageAndApprovePromote/Jenkinsfile"
-buildName: "node-backbone-mongo2"
+chatRoom: "fabric8_default"
+buildName: "node-backbone-mongo-redo"
 codeReview: false
 links:
-  Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo2"
+  Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo-redo"
   Production: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-production"
-  Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/569fdae5adf0021500b60a8c"
+  Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/569fdabfadf0021500b60a8b"
   Staging: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-staging"
 environments:
   Staging: "node-backbone-mongo2-staging"
