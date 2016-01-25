@@ -1,12 +1,12 @@
 ---
 chatRoom: "fabric8_default"
-buildName: "node-backbone-mongo-redo"
+buildName: "node-backbone-mongo-new"
 codeReview: false
 links:
-  Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo-redo"
-  Production: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-production"
+  Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo-new"
+  Production: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo3-production"
   Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/569fdabfadf0021500b60a8b"
-  Staging: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-staging"
+  Staging: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo3-staging"
 environments:
   Staging: "node-backbone-mongo3-staging"
   Production: "node-backbone-mongo3-production"
