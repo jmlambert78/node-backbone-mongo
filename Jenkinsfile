@@ -41,7 +41,9 @@ node ('kubernetes'){
           if (!fileExists ('Dockerfile')) {
             writeFile file: 'Dockerfile', text: 'FROM node:5.3-onbuild'
           }
-          sh "docker build --rm -t ${clusterImageName} ."
+        kubernetes.image().withName(clusterImageName).build().fromPath(".")
+          //kubernetes.image().withName(clusterImageName).push().toRegistry()  
+		  //sh "docker build --rm -t ${clusterImageName} ."
           //sh "docker push ${clusterImageName}"
 
           def rc = getKubernetesJson {
