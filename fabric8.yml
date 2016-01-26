@@ -1,11 +1,11 @@
 ---
 chatRoom: "fabric8_default"
-buildName: "node-backbone-mongo-new"
+buildName: "node-backbone-mongo2"
 codeReview: false
 links:
   Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo2"
   Production: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-production"
-  Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/569fdabfadf0021500b60a8b"
+  Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/56a646371ed281150082f61e"
   Staging: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-staging"
 environments:
   Staging: "node-backbone-mongo2-staging"
