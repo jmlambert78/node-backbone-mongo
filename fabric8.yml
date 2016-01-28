@@ -12,3 +12,4 @@ links:
 environments:
   Staging: "node-mongo-todo-staging"
   Production: "node-mongo-todo-production"
+useLocalFlow: true
