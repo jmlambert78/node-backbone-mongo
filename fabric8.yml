@@ -1,12 +1,13 @@
 ---
+chatRoom: "fabric8_default"
 buildName: "node-backbone-mongo"
 codeReview: false
 links:
   Git: "https://github.com/jmlambert78/node-backbone-mongo"
-  Job: "http://172.30.28.60:80/job/node-backbone-mongo"
-  Production: "http://172.30.52.160:80/kubernetes/pods?namespace=node-mongo-todo-production"
-  Room: "http://letschat.jml.oshift.paas.gemalto.com/#!/room/56aaad29d321b8150013b7e7"
-  Staging: "http://172.30.52.160:80/kubernetes/pods?namespace=node-mongo-todo-staging"
+  Job: "http://172.30.189.134:80/job/node-backbone-mongo"
+  Production: "http://172.30.223.22:80/kubernetes/pods?namespace=node-mongo-todo-production"
+  Room: "http://letschat.jml.oshift.paas.gemalto.com/#!/room/56ab0ca7b368e9150088e5ab"
+  Staging: "http://172.30.223.22:80/kubernetes/pods?namespace=node-mongo-todo-staging"
 environments:
   Staging: "node-mongo-todo-staging"
   Production: "node-mongo-todo-production"
