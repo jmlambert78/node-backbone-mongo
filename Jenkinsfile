@@ -26,7 +26,7 @@ node ('kubernetes'){
     }
 
     kubernetes.image().withName(clusterImageName).build().fromPath(".")
-    kubernetes.image().withName(clusterImageNameWithoutTag).push().withTag(newVersion).toRegistry()
+    //kubernetes.image().withName(clusterImageNameWithoutTag).push().withTag(newVersion).toRegistry()
 
     // gitTag{
     //   releaseVersion = newVersion
