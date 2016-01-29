@@ -32,7 +32,7 @@ routes.init(app);
 //MYMONGO_PORT_27017_TCP_ADDR 
 var port = process.env.VCAP_APP_PORT || 8080;
 
-var dbcreds ={"host":process.env.MYMONGO_PORT_27017_TCP_ADDR ,"db":"testdb","port":"27017","username":"","password":""};
+var dbcreds ={"host":process.env.MONGODB_PORT_27017_TCP_ADDR ,"db":"sampledb","port":"27017","username":"userCBU","password":"RAaAnEAsVmieWLCb"};
 console.log("dbcreds",dbcreds);
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
