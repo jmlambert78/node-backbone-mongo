@@ -1,5 +1,4 @@
 ---
-chatRoom: "fabric8_default"
 buildName: "node-backbone-mongo"
 codeReview: false
 links:
