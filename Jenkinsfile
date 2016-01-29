@@ -40,7 +40,7 @@ node ('kubernetes'){
       imageName = clusterImageName
     }
 
-    sh 'echo "commit:" `git rev-parse HEAD` >> git.yml && echo "branch:" `git rev-parse --abbrev-ref HEAD` >> git.yml'
+    //sh 'echo "commit:" `git rev-parse HEAD` >> git.yml && echo "branch:" `git rev-parse --abbrev-ref HEAD` >> git.yml'
 
   stage 'Rolling upgrade Staging'
     kubernetesApply(file: rc, environment: envStage)
