@@ -1,13 +1,12 @@
 ---
-pipeline: "workflows/node/CanaryReleaseStageAndApprovePromote/Jenkinsfile"
 chatRoom: "fabric8_default"
-buildName: "node-mongo-todo"
+buildName: "node-backbone-mongo"
 codeReview: false
 links:
   Git: "https://github.com/jmlambert78/node-backbone-mongo"
-  Job: "http://172.30.28.60:80/job/node-mongo-todo"
+  Job: "http://172.30.28.60:80/job/node-backbone-mongo"
   Production: "http://172.30.52.160:80/kubernetes/pods?namespace=node-mongo-todo-production"
-  Room: "http://letschat.jml.oshift.paas.gemalto.com/#!/room/56aa755db8c71f15007b98a9"
+  Room: "http://letschat.jml.oshift.paas.gemalto.com/#!/room/56aaad29d321b8150013b7e7"
   Staging: "http://172.30.52.160:80/kubernetes/pods?namespace=node-mongo-todo-staging"
 environments:
   Staging: "node-mongo-todo-staging"
