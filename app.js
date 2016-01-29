@@ -24,8 +24,8 @@ app.use(methodOverride());
 if (env == 'development') {
   app.use(errorhandler());
 }
-//for (var item in process.env) 
-//  console.log(item," = ",process.env[item]);
+for (var item in process.env) 
+  console.log(item," = ",process.env[item]);
 
 
 routes.init(app);
