@@ -32,8 +32,8 @@ routes.init(app);
  var port = process.env.VCAP_APP_PORT || 3000;
 
 //MYMONGO_PORT_27017_TCP_ADDR 
-var mdb_port = process.env.NODE_BACKBONE_MONGO_SERVICE_PORT  || 27017;
-var mdb_host = process.env.NODE_BACKBONE_MONGO_SERVICE_HOST  ||"127.0.0.1";
+var mdb_port = process.env.MONGO_PORT_27017_TCP_PORT    || 27017;
+var mdb_host = process.env.MONGO_PORT_27017_TCP_ADDR    ||"127.0.0.1";
 
 var dbcreds ={"host":mdb_host,"db":"sampledb","port":mdb_port,"username":"","password":""};
 console.log("dbcreds",dbcreds);
