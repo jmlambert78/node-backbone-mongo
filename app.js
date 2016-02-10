@@ -29,12 +29,15 @@ for (var item in process.env)
 
 
 routes.init(app);
+ var port = process.env.VCAP_APP_PORT || 3000;
+
 //MYMONGO_PORT_27017_TCP_ADDR 
-var mdb_port = process.env.NODE_BACKBONE_MONGO_SERVICE_PORT  ||27017;
+var mdb_port = process.env.NODE_BACKBONE_MONGO_SERVICE_PORT  || 27017;
 var mdb_host = process.env.NODE_BACKBONE_MONGO_SERVICE_HOST  ||"127.0.0.1";
 
 var dbcreds ={"host":mdb_host,"db":"sampledb","port":mdb_port,"username":"","password":""};
 console.log("dbcreds",dbcreds);
+
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
   var dbcreds = services['mongodb'][0].credentials;
@@ -44,7 +47,7 @@ if(dbcreds){
   console.log(dbcreds);
   mongoose.connect(dbcreds.host, dbcreds.db, dbcreds.port, {user: dbcreds.username, pass: dbcreds.password});
 }else{
-  mongoose.connect(dbipaddr, "todomvc", 27017);
+  mongoose.connect(mdb_host, "todomvc", 27017);
 }
 
 http.createServer(app).listen(port);
