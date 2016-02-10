@@ -30,9 +30,10 @@ for (var item in process.env)
 
 routes.init(app);
 //MYMONGO_PORT_27017_TCP_ADDR 
-var port = process.env.VCAP_APP_PORT || 8080;
+var mdb_port = process.env.NODE_BACKBONE_MONGO_SERVICE_PORT  ||27017;
+var mdb_host = process.env.NODE_BACKBONE_MONGO_SERVICE_HOST  ||"127.0.0.1";
 
-var dbcreds ={"host":process.env.MONGO_PORT_27017_TCP_ADDR ,"db":"sampledb","port":"27017","username":"","password":""};
+var dbcreds ={"host":mdb_host,"db":"sampledb","port":mdb_port,"username":"","password":""};
 console.log("dbcreds",dbcreds);
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
