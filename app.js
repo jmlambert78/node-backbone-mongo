@@ -29,7 +29,7 @@ for (var item in process.env)
 
 
 routes.init(app);
- var port = process.env.VCAP_APP_PORT || 3000;
+ var port = process.env.VCAP_APP_PORT ||process.env.NODE_BACKBONE_MONGO_SERVICE_PORT|| 3000;
 
 //MYMONGO_PORT_27017_TCP_ADDR 
 var mdb_port = process.env.MONGO_PORT_27017_TCP_PORT    || 27017;
