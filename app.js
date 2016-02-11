@@ -26,7 +26,7 @@ if (env == 'development') {
 }
 for (var item in process.env) 
   console.log(item," = ",process.env[item]);
-
+ 
 
 routes.init(app);
  var port = process.env.VCAP_APP_PORT || 8080;
