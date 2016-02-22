@@ -3,9 +3,9 @@ buildName: "node-backbone-mongo"
 codeReview: false
 links:
   Git: "https://github.com/jmlambert78/node-backbone-mongo"
-  Job: "http://172.30.68.83:80/job/node-backbone-mongo"
+  Job: "http://172.30.234.84:80/job/node-backbone-mongo"
   Room: "http://letschat.master.oshift.paas.gemalto.com/#!/room/56c4b1dac94c7714006d2c4d"
-  Staging: "http://172.30.18.146:80/kubernetes/pods?namespace=node-backbone-mongo-staging"
+  Staging: "http://172.30.209.38:80/kubernetes/pods?namespace=node-backbone-mongo-staging"
 environments:
   Staging: "node-backbone-mongo-staging"
 useLocalFlow: true
