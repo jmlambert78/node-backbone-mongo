@@ -1,5 +1,4 @@
 ---
-pipeline: "workflows/node/CanaryReleaseStage/Jenkinsfile"
 buildName: "node-backbone-mongo-pv"
 codeReview: false
 links:
