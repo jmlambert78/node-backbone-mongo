@@ -3,7 +3,7 @@ buildName: "toto-mongo-pv"
 codeReview: false
 links:
   Git: "https://github.com/jmlambert78/node-backbone-mongo"
-  Job: "http://172.30.235.90:80/job/toto-mongo-pv"
+  Job: "http://172.30.27.198:80/job/toto-mongo-pv"
   Staging: "http://172.30.15.31:80/kubernetes/pods?namespace=node-backbone-mongo-pv-staging"
   Room: "http://letschat.re.oshift.paas.gemalto.com/#!/room/56ccd468e0e73215006d6f24"
 environments:
