@@ -32,9 +32,10 @@ routes.init(app);
 
 //MYMONGO_PORT_27017_TCP_ADDR 
 var mdb_port = process.env.MONGO_PORT_27017_TCP_PORT    || 27017;
-var mdb_host = process.env.MONGO_PORT_27017_TCP_ADDR    ||"127.0.0.1";
+//var mdb_host = process.env.MONGO_PORT_27017_TCP_ADDR    ||"127.0.0.1";
+var mdb_host = "re-risk-engine-staging.mongo"    ||"127.0.0.1";
 
-var dbcreds ={"host":mdb_host,"db":"sampledb","port":mdb_port,"username":"","password":""};
+var dbcreds ={"host":mdb_host,"db":"todos","port":mdb_port,"username":"admin","password":"tartempion"};
 console.log("dbcreds",dbcreds);
 
 if(process.env.VCAP_SERVICES){
