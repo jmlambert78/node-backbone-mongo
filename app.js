@@ -35,7 +35,7 @@ var mdb_port = process.env.MONGO_PORT_27017_TCP_PORT    || 27017;
 //var mdb_host = process.env.MONGO_PORT_27017_TCP_ADDR    ||"127.0.0.1";
 //var mdb_host = "mongo.re-risk-engine-staging.svc.cluster.local"    ||"127.0.0.1";
 var mdb_host = "mongo.re-risk-engine-staging"    ||"127.0.0.1";
-var dbcreds ={"host":mdb_host,"db":"todos","port":mdb_port,"username":"admin","password":"tartempion"};
+var dbcreds ={"host":mdb_host,"db":"todos","port":mdb_port,"username":"todos","password":"tartempion"};
 console.log("dbcreds",dbcreds);
 
 if(process.env.VCAP_SERVICES){
