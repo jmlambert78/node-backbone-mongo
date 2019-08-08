@@ -32,7 +32,13 @@ var dbipaddr = process.env.MYMONGO_PORT_27017_TCP_ADDR|"127.0.0.1";
 var dbcreds ={"host":dbipaddr,"db":"","port":"27017","username":"test","password":"test"};
 if(process.env.VCAP_SERVICES){
   var services = JSON.parse(process.env.VCAP_SERVICES);
-  var dbcreds = services['azure-cosmosdb-mongo-account'][0].credentials;
+  var dbcreds;
+  if ( services['azure-cosmosdb-mongo-account']==null){
+     dbcreds = services['mongodb'][0].credentials
+  }else{
+     dbcreds = services['azure-cosmosdb-mongo-account'][0].credentials
+  }
+	
   dbcreds.db=dbcreds.username; // for azure cosmosdb
 }
 
