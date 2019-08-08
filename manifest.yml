@@ -1,3 +1,5 @@
 applications:
 - name: node-backbone-mongo
   memory: 128M
+  services:
+  - scf-mongo-db
