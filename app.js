@@ -43,7 +43,8 @@ if(process.env.VCAP_SERVICES){
 }
 
 if(dbcreds){
-  var mongoDB = 'mongodb://'+dbcreds.username+':'+ encodeURIComponent(dbcreds.password)+"@"+dbcreds.host+':'+dbcreds.port+'/?ssl=true&replicaSet=globaldb';
+  var mongoDB = 'mongodb://'+dbcreds.username+':'+ encodeURIComponent(dbcreds.password)+"@"+dbcreds.host+':'+dbcreds.port+'/?ssl=false';
+	console.log("mongodb url : ",mongoDB);
   mongoose.connect(mongoDB/*,{useNewUrlParser: true}*/);
 }else{
   mongoose.connect(dbipaddr, "todomvc", 27017);
